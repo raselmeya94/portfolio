@@ -6,63 +6,115 @@ body {
     background-color: #f5f7fa;
     color: #333;
 }
-
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(90deg, #ff7e5f, #feb47b);
     color: white;
-    /* padding: 10px 20px; */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    padding: 10px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo */
 .logo-container {
     display: flex;
-    justify-content: flex-end; /* Aligns the logo to the right */
-    padding: 10px; /* Adds some spacing around the logo */
+    align-items: center;
 }
 
-
 .logo-name {
-    font-family: 'Georgia', serif; /* Academic serif font */
-    font-weight: 700; /* Bold weight */
-    font-size: 2rem; /* Adjust size as needed */
-    letter-spacing: 1px; /* Slightly increase letter spacing for elegance */
-    color: #333;
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #fff;
 }
 
 .first-name {
-    color: #2c3e50; /* Darker color for first name */
+    color: #2c3e50;
 }
 
 .last-name {
-    color: #2980b9; /* Different color for last name for contrast */
+    color: #2980b9;
 }
-/* Navbar styling */
+
+/* Navigation styling */
 nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex-wrap: wrap;  /* Ensures items don't overflow */
-    padding-right: 20px;  /* Add padding to avoid pushing too far right */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav a {
-    margin: 0 15px;
     color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #ffeb3b;  /* Yellow hover effect */
+    color: #ffeb3b;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Hide by default */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #ff7e5f;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon on small screens */
+    }
+}
+
+/* Styles for open/close state of menu icon */
+.menu-icon.open {
+    opacity: 0.7; /* Slightly change opacity for the open state */
+}
+
+.menu-icon.close {
+    transform: rotate(0deg); /* No rotation for the hamburger effect */
+    opacity: 1; /* Normal opacity for the hamburger effect */
 }
 
 /* About Section */
@@ -74,6 +126,7 @@ nav a:hover {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Added flex-wrap for better responsiveness */
 }
 
 .about-profile {
@@ -81,6 +134,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px; /* Added margin for better spacing on smaller screens */
 }
 
 .about-profile-pic {
@@ -129,6 +183,57 @@ nav a:hover {
     background-color: #feb47b;
     transform: scale(1.05);
 }
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .about-container {
+        padding: 40px 20px;
+    }
+    .about-content {
+        padding-left: 30px;
+    }
+    .about-content h2 {
+        font-size: 2rem;
+    }
+    .about-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center; /* Center-align text on smaller screens */
+    }
+    .about-profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+    .about-content {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+    .about-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+    .about-content p {
+        font-size: 0.9rem;
+    }
+}
+
 
 
 /* Section styling */
@@ -389,9 +494,12 @@ form button:hover {
 
 
 
+/* Universal box-sizing */
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+/* Base body styling */
 html {
     box-sizing: border-box;
     font-size: 100%;
@@ -415,6 +523,8 @@ blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
 h1, h2, h3, h4, button, input, label {
     line-height: 1.1;
 }
+
+/* Headings styling */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto';
     font-weight: 400;
@@ -433,6 +543,7 @@ h2 {
     position: relative;
 }
 
+/* Underline for h2 */
 h2::after {
     position: absolute;
     bottom: -1rem;
@@ -444,6 +555,7 @@ h2::after {
     background: #ff5d8f;
 }
 
+/* Timeline container */
 .timeline {
     display: flex;
     flex-direction: column;
@@ -455,6 +567,7 @@ h2::after {
     position: relative;
 }
 
+/* Tree line container */
 .tree {
     display: flex;
     flex-direction: column;
@@ -463,6 +576,7 @@ h2::after {
     margin: auto;
 }
 
+/* Tree line */
 .tree::before {
     position: absolute;
     top: 0;
@@ -474,6 +588,7 @@ h2::after {
     background: #d2e3ed;
 }
 
+/* Timeline boxes */
 .timeline-left, .timeline-right {
     width: 100%;
     max-width: 500px; /* Ensure both sides have the same max-width */
@@ -495,6 +610,7 @@ h2::after {
     margin-right: calc(50% + 1px); /* Align with the timeline line on the right side */
 }
 
+/* Markers */
 .marker-l, .marker-r {
     position: absolute;
     width: 18px;
@@ -513,6 +629,7 @@ h2::after {
     right: -52px; /* Center the marker on the right side */
 }
 
+/* Timeline content styling */
 .timeline-content {
     background-color: #fff;
     padding: 20px;
@@ -530,6 +647,7 @@ h2::after {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Timeline content text */
 .timeline-content h3 {
     margin: 0.5rem 0;
 }
@@ -548,33 +666,38 @@ h2::after {
     color: #000;
 }
 
-@media only screen and (max-width: 40em) {
-    .timeline {
-        padding: 0 1rem;
+/* Responsive styling for smaller screens */
+@media only screen and (max-width: 768px) {
+    /* Remove margins and adjust layout */
+    .timeline-left, .timeline-right {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        text-align: center;
     }
 
-    .tree {
-        padding-left: 1rem;
+    .timeline-left .marker-l, .timeline-right .marker-r {
+        left: -20px;
+        right: 10px;
     }
 
+    /* Adjust tree line position */
     .tree::before {
-        left: 1rem;
+        left: -20px; /* Always on the left */
         transform: none;
     }
 
-    .timeline-left, .timeline-right {
-        padding: 0 2rem;
-        margin-left: 0; /* Remove margin-left for mobile view */
-        margin-right: 0; /* Remove margin-right for mobile view */
-    }
-
     .marker-l, .marker-r {
-        left: 1rem;
-        right: 1rem;
+        left: 15px; /* Align markers with the tree line */
     }
 
+    /* Full width for content */
     .timeline-content {
         width: 100%;
+        margin: 1rem 0;
+        text-align: left;
         padding: 1rem;
     }
 }
@@ -582,7 +705,7 @@ h2::after {
 
 /* Skills Section Styling */
 .skills-section {
-    background: #f5f5f5; /* Light background for the section */
+    background: #f5f5f5; 
     padding: 60px 20px;
 }
 
@@ -590,15 +713,15 @@ h2::after {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 20px;
-    font-family: 'Georgia', serif; /* Elegant serif font */
+    font-family: 'Georgia', serif;
     text-align: center;
 }
 
 .skills-description {
     font-size: 1.2rem;
-    color: #555; /* Slightly lighter color for readability */
+    color: #555; 
     margin-bottom: 30px;
-    font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+    font-family: 'Arial', sans-serif; 
     text-align: center;
 }
 
@@ -651,39 +774,39 @@ h2::after {
 
 /* Category Colors */
 .skills-category:nth-child(1) {
-    background-color: #e1f5fe; /* Light Blue */
-    border-left: 5px solid #4fc3f7; /* Blue Accent */
+    background-color: #e1f5fe; 
+    border-left: 5px solid #4fc3f7; 
 }
 
 .skills-category:nth-child(2) {
-    background-color: #fff3e0; /* Light Orange */
-    border-left: 5px solid #ffb74d; /* Orange Accent */
+    background-color: #fff3e0; 
+    border-left: 5px solid #ffb74d; 
 }
 
 .skills-category:nth-child(3) {
-    background-color: #e8f5e9; /* Light Green */
-    border-left: 5px solid #66bb6a; /* Green Accent */
+    background-color: #e8f5e9; 
+    border-left: 5px solid #66bb6a;
 }
 
 .skills-category:nth-child(4) {
-    background-color: #f3e5f5; /* Light Purple */
-    border-left: 5px solid #ab47bc; /* Purple Accent */
+    background-color: #f3e5f5;
+    border-left: 5px solid #ab47bc; 
 }
 
 .skills-category:nth-child(5) {
-    background-color: #e0f2f1; /* Light Teal */
-    border-left: 5px solid #26a69a; /* Teal Accent */
+    background-color: #e0f2f1; 
+    border-left: 5px solid #26a69a; 
 }
 
 .skills-category:nth-child(6) {
-    background-color: #fce4ec; /* Light Pink */
-    border-left: 5px solid #ec407a; /* Pink Accent */
+    background-color: #fce4ec; 
+    border-left: 5px solid #ec407a; 
 }
 
 
 /* Research Section Styling */
 #research {
-    background: #f9f9f9; /* Light grey background for the section */
+    background: #f9f9f9; 
     padding: 60px 20px;
 }
 
@@ -692,21 +815,21 @@ h2::after {
     color: #333;
     margin-bottom: 20px;
     text-align: center;
-    font-family: 'Georgia', serif; /* Elegant serif font */
+    font-family: 'Georgia', serif;
 }
 
 .research-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center cards horizontally */
-    gap: 30px; /* Increased gap between cards */
+    justify-content: center;
+    gap: 30px; 
 }
 
 .card {
     width: 100%;
-    max-width: 300px; /* Adjusted card width */
-    height: 450px; /* Adjusted card height */
-    perspective: 1000px; /* Gives the card a 3D perspective */
+    max-width: 300px; 
+    height: 450px;
+    perspective: 1000px; 
 }
 
 .card-inner {
@@ -774,8 +897,83 @@ h2::after {
 
 
 /* Experience Section Styling */
+/* .experience-section {
+    background: #f4f4f4; 
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+.experience-timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.experience-item {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.experience-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #69696a;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.experience-content {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 40px; 
+    position: relative;
+}
+
+.job-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.company-name {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 5px 0 20px;
+}
+.company-location {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 5px 0 20px;
+}
+
+.job-description {
+    margin: 0;
+    padding: 0;
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.job-description li {
+    margin-bottom: 10px;
+} */
+
+/* Experience Section Styling */
 .experience-section {
-    background: #f4f4f4; /* Light grey background */
+    background: #f4f4f4; 
     padding: 60px 20px;
 }
 
@@ -826,17 +1024,11 @@ h2::after {
     margin: 0;
 }
 
-.company-name {
+.company-name, .company-location {
     font-size: 1.2rem;
     color: #555;
     margin: 5px 0 20px;
 }
-.company-location {
-    font-size: 1.2rem;
-    color: #555;
-    margin: 5px 0 20px;
-}
-
 
 .job-description {
     margin: 0;
@@ -848,6 +1040,53 @@ h2::after {
 .job-description li {
     margin-bottom: 10px;
 }
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .experience-item {
+        margin-bottom: 40px;
+    }
+
+    .experience-date {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+
+    .experience-content {
+        margin-top: 30px; /* Adjust to create space for the date */
+    }
+
+    .job-title {
+        font-size: 1.2rem;
+    }
+
+    .company-name, .company-location {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-date {
+        font-size: 0.7rem;
+        padding: 6px 10px;
+    }
+
+    .experience-content {
+        margin-top: 20px; /* Adjust to create space for the date */
+        padding: 15px;
+    }
+
+    .job-title {
+        font-size: 1rem;
+    }
+
+    .company-name, .company-location {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Certificate */
 
 #certificates {
     background: #f9f9f9;
@@ -873,22 +1112,10 @@ h2::after {
     transform: translateY(-10px);
 }
 
-
-
 .certificate-item img {
     max-width: 50px;
     margin-bottom: 15px;
 }
-
-.certificate-item {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-}
-
-
 
 .certificate-item h4 {
     font-size: 1.1rem;
@@ -899,4 +1126,5 @@ h2::after {
     font-size: 0.9rem;
     color: #555;
 }
+
 
