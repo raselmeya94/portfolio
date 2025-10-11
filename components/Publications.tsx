@@ -14,10 +14,11 @@ const Publications: React.FC = () => {
               className="bg-light-navy rounded-lg shadow-lg overflow-hidden flex flex-col group transform hover:-translate-y-2 transition-transform duration-300 max-w-xs w-full"
             >
               <img
-                src={pub.imageUrl}
+                src={`/portfolio${pub.imageUrl}`}  // Prefixing the image URL with '/portfolio' to handle GitHub Pages base path
                 alt={pub.title}
                 className="w-full h-48 object-contain"
               />
+
 
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-lg font-serif font-bold text-lightest-slate group-hover:text-accent transition-colors">
