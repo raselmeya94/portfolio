@@ -110,7 +110,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="min-h-[60vh] flex flex-col justify-center py-20">
+    <section id="hero" className="min-h-[60vh] flex flex-col justify-center py-12">
       <p className="text-accent text-md font-mono mb-4">Hi, my name is</p>
       <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-extrabold text-lightest-slate">
         Rasel Meya
