@@ -313,7 +313,7 @@ export const CONTACT_LINKS = [
   },
   {
     name: 'CV',
-    url: 'portfolio/resume/rasel_meya_resume.pdf',
+    url: `${process.env.PUBLIC_URL}/resume/rasel_meya_resume.pdf`,
     icon: <FileText className="w-6 h-6" />,
   }
 ];
