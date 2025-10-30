@@ -18,6 +18,12 @@ export interface Publication {
   description: string;
   imageUrl: string;
 }
+export interface Research {
+  title: string;
+  description: string;
+  status: string; 
+  tags: string[];
+}
 
 export interface Project {
   date: string;

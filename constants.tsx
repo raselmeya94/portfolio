@@ -1,5 +1,5 @@
 import React from 'react';
-import type { NavLink, Experience, Publication, Project, SkillCategory, Certificate } from './types';
+import type { NavLink, Experience, Publication, Research, Project, SkillCategory, Certificate } from './types';
 import { Github, Linkedin, Mail, FileText, BrainCircuit, Dna, Code, Phone } from 'lucide-react';
 
 
@@ -9,6 +9,7 @@ export const NAV_LINKS: NavLink[] = [
   { name: 'Education', href: '#education' },
   { name: 'Experience', href: '#experience' },
   { name: 'Publications', href: '#publications' },
+  { name: 'Research', href: '#research' },
   { name: 'Projects', href: '#projects' },
   { name: 'Skills', href: '#skills' },
   { name: 'Contact', href: '#contact' },
@@ -112,47 +113,37 @@ export const PUBLICATIONS: Publication[] = [
   }
 ];
 
+// ------------------ 📄 ONGOING RESEARCH ------------------
+export const ONGOING_RESEARCH: Research[] = [
+  {
+    title: 'Exploring Embedding Approaches for Text Classification across Traditional Machine Learning, Deep Learning, and Transformer Models',
+    description: 'Investigating the effectiveness of various embedding techniques to improve text classification performance using traditional machine learning models, deep learning approaches, and transformer-based architectures.',
+    tags: ['Text Classification', 'Embedding Techniques', 'Traditional ML', 'Deep Learning', 'Transformers'],
+    status: 'Drafting',  // New field for status
+  },
+  {
+    title: 'Benchmarking Multilingual Prompting for Code Evaluation across Multiple Programming Languages',
+    description: 'Developing a benchmark framework to evaluate the performance of multilingual prompting techniques in code generation and comprehension tasks across different programming languages.',
+    tags: ['Code Evaluation', 'Multilingual', 'Prompting', 'Programming Languages', 'Benchmarking'],
+    status: 'In Progress',  // New field for status
+  },
+  {
+    title: 'Deep Learning-Based Handwritten Medicine Name Recognition for Improved Prescription Accuracy',
+    description: 'Designing a deep learning system to recognize medicine names in handwritten prescriptions, aiming to reduce medication errors and improve prescription accuracy.',
+    tags: ['Handwriting Recognition', 'Medicine Name Recognition', 'Deep Learning', 'Prescription Accuracy'],
+    status: 'Completed',  // New field for status
+  }
+];
 
-// // ------------------ 🧪 PROJECTS ------------------
-// export const PROJECTS: Project[] = [
-//   {
-//     date: '2024–2025',
-//     title: 'Multi-Task LLM-Based Web Platform',
-//     description: 'Streamlit-based platform offering summarization, Q&A, document conversion, and content generation using LLMs.',
-//     githubUrl: 'https://github.com/raselmeya94',
-//     tags: ['LLM', 'Python', 'Streamlit', 'GenAI']
-//   },
-//   {
-//     date: '2024',
-//     title: 'Multilingual Retrieval-Augmented Generation (RAG) System',
-//     description: 'Developed a multilingual RAG system supporting Bengali and English using FAISS vector search and MiniLM embeddings.',
-//     githubUrl: 'https://github.com/raselmeya94',
-//     tags: ['RAG', 'LLM', 'FAISS', 'MiniLM']
-//   },
-//   {
-//     date: '2023',
-//     title: 'Lekhoni: Bengali Handwriting Dataset Platform',
-//     description: 'Built a data collection and visualization platform for Bengali handwriting recognition and OCR research.',
-//     githubUrl: 'https://github.com/raselmeya94',
-//     tags: ['OCR', 'Dataset', 'Bengali']
-//   },
-//   {
-//     date: '2023',
-//     title: 'Directory Visualizer (PyPI Package)',
-//     description: 'Published a CLI tool that generates visual directory trees for large software projects in Markdown or Mermaid.',
-//     githubUrl: 'https://pypi.org/project/directory-visualizer/',
-//     tags: ['Python', 'CLI', 'Open Source']
-//   },
-//   {
-//     date: '2024',
-//     title: 'Bengali Spell Checker',
-//     description: 'Developed a real-time spelling correction system for the Bengali language using NLP techniques.',
-//     githubUrl: 'https://github.com/raselmeya94',
-//     tags: ['NLP', 'Python', 'Bengali']
-//   }
-// ];
 // ------------------ 🧪 PROJECTS ------------------
 export const PROJECTS: Project[] = [
+  {
+    date: '2025',
+    title: 'med_dialogue2soap: Model for Generating SOAP Notes from Medical Dialogue',
+    description: 'Fine-tuned model based on microsoft/Phi-3-mini-4k-instruct to automatically generate SOAP notes from doctor-patient dialogues, streamlining medical documentation.',
+    githubUrl: 'https://huggingface.co/raselmeya2194/med_dialogue2soap',
+    tags: ['finetune', 'phi-3', 'NLP', 'Machine Learning', 'Healthcare'],
+  },
   {
     date: '2025',
     title: 'Multi-Task LLM-Based Web Application',
