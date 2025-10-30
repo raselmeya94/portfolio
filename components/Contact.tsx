@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
     <Section id="contact" title="Get In Touch">
       <div className="text-center max-w-lg mx-auto">
         <p className="text-light-slate mb-8">
-          I am actively exploring PhD opportunities starting Fall 2025 and am open to discussing potential research collaborations. Whether you have a question or just want to connect, feel free to reach out.
+          I am actively exploring PhD opportunities starting Fall 2026 and am open to discussing potential research collaborations. Whether you have a question or just want to connect, feel free to reach out.
         </p>
         <a href="mailto:raselmeya2194@gmail.com" className="inline-block text-accent border border-accent rounded-md px-8 py-4 hover:bg-accent/10 transition-colors text-lg">
           Say Hello
