@@ -52,11 +52,11 @@ export const RESEARCH_INTERESTS: { name: string; icon: JSX.Element }[] = [
 export const EXPERIENCES: Experience[] = [
   {
     date: 'Oct 2023 – Present',
-    title: 'Data Scientist',
+    title: 'AI Engineer',
     company: 'Tappware Solution Limited',
     location: 'Dhaka, Bangladesh',
     description: [
-      'Leading R&D in AI, NLP, and Generative LLMs for real-world Bengali and English applications.',
+      'Conducted R&D in AI, NLP, and Generative LLMs for real-world Bengali and English applications.',
       'Designed and deployed LLM-powered apps such as AI Summarizer, Invoice Info Extractor, Resume Analyzer, and YouTube Video Summarizer.',
       'Integrated and fine-tuned models like Mistral, T5, and Whisper for summarization, Q&A, and speech-to-text tasks.',
       'Developed APIs and NLP pipelines for text classification, OCR, and document parsing.',
