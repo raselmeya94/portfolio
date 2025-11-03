@@ -12,11 +12,12 @@ const Hero: React.FC = () => {
     </h2>
   
     <p className="max-w-2xl mt-6 text-light-slate leading-relaxed">
-      AI Engineer and Researcher passionate about advancing 
-      <span className="text-accent">Machine Learning</span>, 
-      <span className="text-accent">Natural Language Processing</span>, and 
+      AI Engineer and Researcher passionate about advancing&nbsp;
+      <span className="text-accent">Machine Learning</span>,&nbsp;
+      <span className="text-accent">Natural Language Processing</span>, and&nbsp;
       <span className="text-accent">Large Language Models (LLMs)</span> for real-world and multilingual applications.
     </p>
+
   
     <div className="mt-8">
       <a
