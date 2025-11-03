@@ -9,10 +9,10 @@ const About: React.FC = () => {
         {/* Text Section */}
         <div className="md:col-span-3 text-light-slate space-y-4">
           <p>
-            I'm <span className="text-accent font-semibold">Rasel Meya</span>, a Data Scientist and Researcher with a passion for advancing <span className="text-lightest-slate">Machine Learning, NLP, and Large Language Models (LLMs)</span>. I hold an <strong>M.Sc.</strong> in Computer Science & Telecommunication Engineering from <strong>Noakhali Science and Technology University</strong>.
+            I'm <span className="text-accent font-semibold">Rasel Meya</span>, an AI Engineer and Researcher with a passion for advancing <span className="text-lightest-slate">Machine Learning, NLP, and Large Language Models (LLMs)</span>. I hold an <strong>M.Sc.</strong> in Computer Science & Telecommunication Engineering from <strong>Noakhali Science and Technology University</strong>.
           </p>
           <p>
-            At <strong>Tappware Solution Limited</strong>, I lead R&D initiatives, focusing on <span className="text-lightest-slate">Bengali NLP</span>, <span className="text-lightest-slate">LLM fine-tuning</span>, and deploying AI systems for real-world applications like OCR pipelines and multilingual RAG systems.
+            At <strong>Tappware Solution Limited</strong>, I work on R&D initiatives, focusing on <span className="text-lightest-slate">Bengali NLP</span>, <span className="text-lightest-slate">LLM fine-tuning</span>, and deploying AI systems for real-world applications like OCR pipelines and multilingual RAG systems.
           </p>
           <p>
             My goal is to drive innovation in <span className="text-lightest-slate">multilingual AI</span> and <span className="text-lightest-slate">low-resource language processing</span>, with applications in education and healthcare, while pursuing a PhD in AI/NLP.
