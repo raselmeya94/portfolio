@@ -7,9 +7,9 @@ const Footer: React.FC = () => {
       <p className="text-slate text-sm">
         &copy; {new Date().getFullYear()} Rasel Meya. All rights reserved.
       </p>
-      <p className="text-xs text-slate/70 mt-1">
+      {/* <p className="text-xs text-slate/70 mt-1">
         Designed & Built by Rasel Meya.
-      </p>
+      </p> */}
     </footer>
   );
 };
