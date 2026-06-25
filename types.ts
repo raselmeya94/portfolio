@@ -1,0 +1,50 @@
+
+export interface NavLink {
+  name: string;
+  href: string;
+}
+
+export interface Experience {
+  date: string;
+  title: string;
+  company: string;
+  location: string;
+  description: string[];
+}
+
+export interface Publication {
+  title: string;
+  venue: string;
+  description: string;
+  imageUrl: string;
+}
+export interface Research {
+  title: string;
+  description: string;
+  status: string; 
+  tags: string[];
+}
+
+export interface Project {
+  date: string;
+  title: string;
+  description: string;
+  githubUrl: string;
+  tags: string[];
+  imageUrl?: string;
+  category?: 'Personal' | 'Company' | 'Open Source' | 'Research';
+  liveUrl?: string;
+  secondaryUrl?: { label: string; url: string };
+  featured?: boolean;
+}
+
+export interface SkillCategory {
+  title: string;
+  skills: { name: string; icon: JSX.Element }[];
+}
+
+export interface Certificate {
+  title: string;
+  issuer: string;
+  url: string;
+}
