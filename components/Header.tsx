@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+  const resumeUrl = `${import.meta.env.BASE_URL}resume/rasel_meya_resume.pdf`;
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -32,7 +32,7 @@ const Header: React.FC = () => {
               </a>
             ))}
             <a
-              href="/resume/rasel_meya_resume.pdf"
+              href={resumeUrl}
               download="rasel_meya_resume.pdf"
               className="text-sm text-accent border border-accent rounded-md px-4 py-2 hover:bg-accent/10 transition-colors"
             >
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
             </a>
           ))}
           <a
-            href="/resume/rasel_meya_resume.pdf"
+            href={resumeUrl}
             download="rasel_meya_resume.pdf"
             className="text-accent border border-accent rounded-md px-4 py-2 hover:bg-accent/10 transition-colors"
           >
